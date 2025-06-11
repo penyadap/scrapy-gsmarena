@@ -1,4 +1,4 @@
-name: Scrapy Crawl
+name: Scrapy Crawl s
 
 on:
   workflow_dispatch: # Bisa dijalankan manual dari GitHub UI
