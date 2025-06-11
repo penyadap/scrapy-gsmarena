@@ -1,3 +1,4 @@
 scrapy
-python-dateutil
 itemloaders
+python-dateutil
+scrapy-fake-useragent
