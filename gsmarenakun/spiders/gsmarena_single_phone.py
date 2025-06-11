@@ -282,8 +282,4 @@ class PhoneDataItemLoaderSpider(scrapy.Spider):
         else:
             self.logger.warning(f"Data kosong untuk {response.url}, tidak disimpan.")
 
-        title = response.xpath('//title/text()').get()
-        if title:
-            yield {'title': title, 'url': response.url}
-        else:
-            self.logger.warning(f"Tidak ada data di {response.url}")
+       
