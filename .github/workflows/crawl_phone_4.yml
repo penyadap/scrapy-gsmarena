@@ -1,0 +1,39 @@
+name: Scrapy Crawl
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r gsmarenakun/requirements.txt
+
+      - name: Create raw folder
+        run: mkdir -p raw
+
+      - name: Run crawl phone 4
+        run: python crawl_phone_4.py
+
+      - name: Commit and push result
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add list_urls.txt unlist_urls.txt
+          git commit -m "Update list_urls.txt unlist_urls.txt [auto]" || echo "No changes to commit"
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
