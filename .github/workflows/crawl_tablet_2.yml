@@ -1,10 +1,10 @@
-name: Crawl Phone 7
+name: Crawl Tablet 2
 
 on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "0 14 * * *" # Runs at 2:00 PM UTC every day
+    - cron: "0 16 * * *" # Runs at 00:00 (midnight) UTC every day
 
 jobs:
   crawl:
@@ -27,8 +27,8 @@ jobs:
       - name: Create raw folder
         run: mkdir -p raw
 
-      - name: Run crawl phone 7
-        run: python crawl_phone_7.py
+      - name: Run crawl phone 1
+        run: python crawl_tablet_1.py
 
       - name: Commit and push result
         env:

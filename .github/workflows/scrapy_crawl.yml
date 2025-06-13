@@ -1,8 +1,10 @@
-name: Scrapy Crawl
+name: Scrapy Crawl Phones
 
 on:
   workflow_dispatch:
   push:
+  schedule:
+    - cron: "0 0 * * *" # Runs at 00:00 UTC every day
 
 jobs:
   crawl:
