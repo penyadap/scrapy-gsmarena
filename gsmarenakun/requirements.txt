@@ -2,3 +2,4 @@ scrapy
 itemloaders
 python-dateutil
 scrapy-fake-useragent
+beautifulsoup4
