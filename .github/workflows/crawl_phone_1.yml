@@ -31,6 +31,21 @@ jobs:
       - name: Run crawl phone 2
         run: python crawl_phone_2.py
 
+      - name: Run crawl phone 3
+        run: python crawl_phone_3.py
+      
+      - name: Run crawl phone 4
+        run: python crawl_phone_4.py
+
+      - name: Run crawl phone 5
+        run: python crawl_phone_5.py
+      
+      - name: Run crawl phone 6
+        run: python crawl_phone_6.py
+
+      - name: Run crawl phone 7
+        run: python crawl_phone_7.py
+
       - name: Commit and push result
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
