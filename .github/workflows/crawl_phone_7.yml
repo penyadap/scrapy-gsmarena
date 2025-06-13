@@ -2,7 +2,6 @@ name: Crawl Phone 7
 
 on:
   workflow_dispatch:
-  push:
   schedule:
     - cron: "0 14 * * *" # Runs at 2:00 PM UTC every day
 

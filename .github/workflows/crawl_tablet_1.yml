@@ -2,7 +2,6 @@ name: Crawl Tablet 1
 
 on:
   workflow_dispatch:
-  push:
   schedule:
     - cron: "0 15 * * *" # Runs at 00:00 (midnight) UTC every day
 
