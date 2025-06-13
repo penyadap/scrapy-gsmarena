@@ -38,5 +38,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add list_urls.txt unlist_urls.txt
-          git commit -m "Update phones.json [auto]" || echo "No changes to commit"
+          git commit -m "Update list_urls.txt unlist_urls.txt [auto]" || echo "No changes to commit"
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
