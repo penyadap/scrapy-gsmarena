@@ -23,9 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r gsmarenakun/requirements.txt
 
-      - name: Create raw folder
-        run: mkdir -p raw
-
       - name: Run Scrapy spider
         run: scrapy crawl gsmarena_single_phone_spider -o raw/phones.json
 

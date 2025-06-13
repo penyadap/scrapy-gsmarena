@@ -23,9 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r gsmarenakun/requirements.txt
 
-      - name: Create raw folder
-        run: mkdir -p raw
-
       - name: Run crawl phone 1
         run: python crawl_phone_1.py
 
