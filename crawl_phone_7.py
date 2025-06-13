@@ -54,7 +54,7 @@ for idx, url in enumerate(target_urls, 1):
         print(f"  ❌ Error saat memproses: {e}")
 
 # Simpan hasil
-with open("list_urls.txt", "w", encoding="utf-8") as f:
+with open("list_urls.txt", "a", encoding="utf-8") as f:
     for link in all_new_links:
         f.write(link + "\n")
 
